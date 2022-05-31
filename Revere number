@@ -1,0 +1,19 @@
+package Stack;
+import java.util.Scanner;
+
+public class StackDemo {
+
+	public static void main(String[] args) {
+		int rem = 0;
+		Scanner r=new Scanner(System.in);
+		System.out.println("Enter a Number");
+	    int n=r.nextInt();
+		while(n>0 )
+			{
+			rem=n%10;
+			System.out.println(rem);//(3*3*3)+0/(3*3*3)+27
+
+			n=n/10;
+			}
+	} 
+}
