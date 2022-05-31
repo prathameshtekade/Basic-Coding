@@ -1,0 +1,19 @@
+package Stack;
+import java.util.Scanner;
+
+public class StackDemo {
+
+	public static void main(String[] args) {
+		int result=1;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a Number");
+		int n=sc.nextInt();
+		System.out.println("Enter a Power");
+		int p=sc.nextInt();
+		 for(int i=1;i<=p;i++)
+ {
+	result=result*n;
+ }
+		 System.out.println("Power "+result);
+	} 
+}
