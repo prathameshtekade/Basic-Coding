@@ -1,0 +1,19 @@
+package Stack;
+import java.util.Scanner;
+
+public class StackDemo {
+
+	public static void main(String[] args) {
+		int resultant=1;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a Number");
+		int n=sc.nextInt();
+		 for(int i=n;i>=1;i--)
+ {
+			 System.out.println("Factorial"+i);
+			 resultant=resultant*i;
+ }
+		 System.out.println("Resultant= "+resultant);
+
+	} 
+}
