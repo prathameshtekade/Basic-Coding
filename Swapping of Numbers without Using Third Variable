@@ -1,0 +1,20 @@
+package Stack;
+import java.util.Scanner;
+
+public class StackDemo {
+
+	public static void main(String[] args) {
+		int a,b;
+		int temp;
+		Scanner r=new Scanner(System.in);
+		System.out.println("Enter Number a");
+		a=r.nextInt();
+		System.out.println("Enter Number b");
+		b=r.nextInt();
+System.out.println("Numbers Before Swapping "+a+" "+b);
+a=a+b;
+b=a-b;
+a=a-b;
+System.out.println("Numbers After Sawapping"+a+" "+b);
+	} 
+}
