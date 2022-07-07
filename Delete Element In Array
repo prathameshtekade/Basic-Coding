@@ -1,0 +1,31 @@
+package BasicPractice;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Dummy {
+
+	public static void main(String[] args) {
+		int i;
+		 Scanner sc=new Scanner(System.in);
+		 System.out.println("Enter size of array ");
+	        int size=sc.nextInt();
+	        int[] arr=new int[size];
+	       for(i=0;i<size;i++) {// size = 5 //0 1 2 3 4  
+	    	   arr[i]=sc.nextInt();
+	       }
+	       System.out.println("Enter Array Index");
+	       int location=sc.nextInt();      
+	       for( i=location;i<size-1;i++) {
+	    	   // size-1=5-1=4 // 0 1 2 3 4
+	    	 //loc=2 i<4  //0 1 2 3 //
+	    	   arr[i]=arr[i+1];
+	       }
+	       size--;
+	       for(i=0;i<size;i++) {
+	    	   
+	    	   System.out.print(arr[i]+" ");
+	       }
+	}
+
+}
