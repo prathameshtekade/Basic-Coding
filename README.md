@@ -31,3 +31,20 @@ which is not primary key.
 BCNF:-
 1)Table should be in 3NF.
 2)BCNF Doesn't allow non prime attribute depends on prime attributes. 
+
+JOINS:-
+
+There are Seven Types of join 
+1)Equi Join
+2)NonEqui join
+3)Natural Join
+4)Inner join 
+5)Cross join
+6)Outer join
+	-Left Outer Join:-Select columname from table_name join_Name secondtable_name;
+	-Right Outer Join
+	-Full Outer Join
+Select columname from table_name join_Name secondtable_name on firsttable_name ;
+7)Self Join
+
+Equi join,natural join and inner join are same;
