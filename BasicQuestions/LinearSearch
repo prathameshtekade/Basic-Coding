@@ -1,0 +1,24 @@
+package Algorithms;
+
+import java.util.Scanner;
+
+public class LinearSearch {
+
+	public static void main(String[] args) {
+		int arr[]= {2,3,4,5,9,8,6};
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the key you wan to search");
+		int k=sc.nextInt();
+		System.out.println(linearSearch(arr,k));
+	}
+public static int linearSearch(int[] arr,int k) {
+	int n=arr.length;
+	for(int i=0;i<=n;i++) {
+		if(arr[i]==k) {
+			return i;
+		}
+	}
+	return -1;
+	
+}	
+}
