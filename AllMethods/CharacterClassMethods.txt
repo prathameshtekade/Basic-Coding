@@ -1,0 +1,7 @@
+Character.isLetter('w')
+Character.isUpperCase('w')
+Character.isLowerCase('w')
+Character.isSpaceChar(' ')
+Character.isDigit(c)
+Character.toLowerCase('P')
+Character.toUpperCase('k')

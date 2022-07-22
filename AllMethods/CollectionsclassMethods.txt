@@ -1,0 +1,5 @@
+Collections.min(al)
+Collections.max(al)
+Collections.sort(al)
+Collections.sort(al, Collections.reverseOrder())
+Collections.reverse(al)

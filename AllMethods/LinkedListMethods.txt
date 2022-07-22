@@ -1,0 +1,6 @@
+ll.add(12);
+ll.add(0, 11);
+ll.addFirst(88);
+ll.addLast(17);
+ll.remove(1);
+ll.contains(12)		

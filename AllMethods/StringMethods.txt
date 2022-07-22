@@ -1,0 +1,30 @@
+To Find SubString:-
+eg.
+String x = "0123456789"; // the value of each char is the same as its index!
+System.out.println( x.substring(5) ); // output is "56789"
+System.out.println( x.substring(5, 8)); // output is "567"
+To Remove Spaces between the strings:-
+eg.
+String x = " hi ";
+System.out.println( x + "x" ); // result is" hi x"
+System.out.println(x.trim() + "x"); // result is "hix"
+To Produce string to charArray:-
+eg.
+String s = “Java”;
+Char [] arrayChar = s.toCharArray();  //this will produce array of size 4
+To Find String is present in string:-
+eg.
+String x = “Java is programming language”;
+System.out.println(x.contains(“Amit”)); // This will print false  
+System.out.println(x.contains(“Java”)); // This will print true
+*String Methods:-
+To Find String Length:- x.length()
+To Convert to Uppercase:- x.toUpperCase()
+To Convert to Lowercase:- x.toLowerCase()
+To Find Index of:- x.indexOf(character)
+To Concatenate :- x.concat("String Name")
+To find cahracter at index:- x.charAt(index)
+To Ignore Case of a String:- x.equalsIgnoreCase("EXIT")
+To replace some character to another:- x.replace('x', 'X') //input is oxoxoxox output is  "oXoXoXoX"
+To repeat string count :-s.repeat(int count)
+import

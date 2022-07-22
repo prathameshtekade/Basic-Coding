@@ -1,0 +1,3 @@
+Character.isLowerCase(ch)
+Character.isUpperCase(ch)
+Character.isDigit(ch)
