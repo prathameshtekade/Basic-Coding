@@ -1,0 +1,37 @@
+Q.Find Third Hghest Salary in table?
+-->Select salary from employeeinfo Order By salary Desc limit 2,1; OR
+-->Select*from employeeinfo Order By salary Desc limit 2,1;//select 1 row after 2 rows
+
+Q.Find the Nth highest salary from the table without using TOP/limit keyword?
+-->Select salary from employeetable e1 where N-1=(Select Count Distinct salary) from Employeetable e2 where e2.Salary>e1.Salary;
+
+Q.Find duplicate rows in a table?
+-->Select*,count(empid) from employeetble group by empid;
+-->Having count(empid)>1;
+
+Q.Calculate the even records from a table?
+-->select*from employeetable where mod(empid,2)=0;
+
+Q.Calculate the odd records from a table?
+-->select*from employeetable where mod(empid,2)=1;
+
+Q.Display the first record from the EmployeeInfo table?
+-->slect*from employeetable where empid=(select min(empid) from Employeetable); 
+
+Q.Display the last record from the EmployeeInfo table?
+-->slect*from employeetable where empid=(select max(empid) from Employeetable); 
+
+Q.How do you copy all rows of a table using SQL query?
+-->create table empdetails As select*from employeetable;
+-->create table empsalary As select Empid,Salary from Employee;
+-->create table empdetails As select*from employeetable where 3=4;//where 3=4 return false 
+
+Q.Retrieve the list of employees working in the same department?
+-->Select Distinct Empid,EmpFname,Department From Employeetable E,Employeetable E1 Where E.Department=E1.Department And E.Empid!=E1.Empid;
+
+Q.Retrieve the last 3 records from the EmployeeInfo table?
+-->Select*From(Select*fromEmployeeTable Order by Empid Desc Limit 3) temp Order By Empid Asc;
+-->Select*From temp Order By Empid Asc;
+
+Q.Fetch details of employees whose EmpLname ends with an alphabet ‘A’ and contains five alphabets.
+-->Select*From EmployeeTable where Emplname Like'__A';
