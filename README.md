@@ -48,3 +48,7 @@ Select columname from table_name join_Name secondtable_name on firsttable_name ;
 7)Self Join
 
 Equi join,natural join and inner join are same;
+
+
+What Is Linux?
+Linux is a Unix-like open-source computer operating system (OS) that directly manages hardware and resources of a system such as CPU, memory, and storage, and manages the communication between software and hardware.
