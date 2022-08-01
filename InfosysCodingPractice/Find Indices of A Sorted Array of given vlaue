@@ -1,0 +1,25 @@
+import java.util.Arrays;
+
+public class FindIndicesOfElements {
+
+	public static void main(String[] args) {
+		
+		int arr[]= {1, 2, 5, 2, 3};
+		int val=3;
+		Arrays.sort(arr);
+		System.out.println("After Sorting:");
+for(int i:arr) {
+	System.out.println(i);
+}
+System.out.println("Printing Targeted Value Indices:");
+for(int i=0;i<arr.length;i++) {
+	if(arr[i]==val) {
+		System.out.println(arr[i]);
+		break;
+	}
+	System.out.println(arr[i]);
+}
+
+}
+	}
+
