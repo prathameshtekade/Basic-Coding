@@ -1,0 +1,72 @@
+
+class RemoveMinimumCharacterFromString
+{
+	
+//Function that counts minimum
+//character that must be removed
+static void min_remove(String str)
+{
+	
+	// Length of string
+	int N = str.length();
+
+	// Create prefix array
+	int []prefix_a = new int[N + 1];
+	int []prefix_b = new int[N + 1];
+	int []prefix_c = new int[N + 1];
+
+	// Initialize first position
+	prefix_a[0] = 0;
+	prefix_b[0] = 0;
+	prefix_c[0] = 0;
+
+	// Fill prefix array
+	for(int i = 1; i <= N; i++)
+	{
+		prefix_a[i] = prefix_a[i - 1] +
+					(int)((str.charAt(
+							i - 1) == 'a') ? 1 : 0);
+
+		prefix_b[i] = prefix_b[i - 1] +
+					(int)((str.charAt(i - 1) ==
+									'b') ? 1 : 0);
+
+		prefix_c[i] = prefix_c[i - 1] +
+					(int)((str.charAt(i - 1) ==
+									'c') ? 1 : 0);
+	}
+
+	// Initialise maxi
+	int maxi = Integer.MIN_VALUE;
+
+	// Check all the possibilities by
+	// putting i and j at different
+	// position & find maximum among them
+	for(int i = 0; i <= N; i++)
+	{
+		for(int j = i; j <= N; j++)
+		{
+			maxi = Math.max(maxi, (prefix_a[i] +
+								(prefix_b[j] -
+								prefix_b[i]) +
+								(prefix_c[N] -
+								prefix_c[j])));
+		}
+	}
+
+	// Print the characters to be removed
+	System.out.println((N - maxi));
+}
+
+//Driver Code
+public static void main(String []args)
+{
+	
+	// Given String
+	String str = "aaaabaaxccac";
+
+	// Function call
+	min_remove(str);
+}
+}
+
