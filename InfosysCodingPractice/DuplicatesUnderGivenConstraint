@@ -1,0 +1,17 @@
+class DuplicatesUnderGivenConstraint{
+ 
+static int findDuplicate(int a[])
+{
+    if (a[3] == a[4])
+        return a[3];
+    else if (a[4] == a[5])
+        return a[4];
+    else
+        return a[5];
+}
+public static void main(String[] args)
+{
+    int a[] = {1, 1, 1, 1, 1, 5, 7, 10, 20, 30};
+    System.out.println(findDuplicate(a));
+}
+}
