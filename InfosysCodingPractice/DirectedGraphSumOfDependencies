@@ -1,0 +1,42 @@
+
+import java.util.*;
+public class DirectedGraphSumOfDependencies
+{
+	static void Edge(Stack <Integer> adjlist[], int u,int v)
+	{
+		adjlist[u].addElement((v));
+	}
+
+
+	static int dSum(Stack<Integer> adjlist[], int V)
+	{
+		int sum = 0;
+
+
+		for (int u = 0; u < V; u++)
+			sum += adjlist[u].size();
+
+		return sum;
+	}
+
+
+	public static void main(String[] args)
+	{
+		int V = 4;
+
+		Stack<Integer> adjlist[] = new Stack[V];
+
+		for (int i = 0; i < adjlist.length; i++)
+		{
+			adjlist[i] = new Stack<>();
+		}
+
+		Edge(adjlist, 0, 2);
+		Edge(adjlist, 0, 3);
+		Edge(adjlist, 1, 3);
+		Edge(adjlist, 2, 3);
+
+		System.out.println("dependencies sum is  " +
+				dSum(adjlist, V));
+	}
+}
