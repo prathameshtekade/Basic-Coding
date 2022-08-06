@@ -1,0 +1,17 @@
+package Recursion;
+
+public class Sum {
+	static int sum(int[] arr,int size) {
+		if(size==0) {
+			return 0;
+		}
+		return arr[size-1]+sum(arr,size-1);
+	}
+
+	public static void main(String[] args) {
+		int[] arr= {1,5,8,7,9};
+		int size=5;
+		System.out.println(sum(arr,5));
+}
+
+}
