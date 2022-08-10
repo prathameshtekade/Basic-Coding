@@ -1,0 +1,50 @@
+package dsaproblemsolving;
+import java.util.*;
+import java.util.Scanner;
+
+public class NutBoltsInfosys 
+{
+
+	public static void main(String[] args) 
+	{
+
+		Scanner sc =  new Scanner(System.in);
+		int n = sc.nextInt();
+		String nut[] = new String [n];
+		String[] bolt = new String [n];
+
+
+		for(int i=0;i<n;i++)
+		{
+			nut[i]=sc.next();
+		}
+
+		for(int i=0;i<n;i++)
+		{
+			bolt[i]=sc.next();
+		}
+		
+		Arrays.sort(nut);
+		Arrays.sort(bolt);
+		
+		String nutL[] = Arrays.toString(nut).toLowerCase().split("");
+		String boltL[] = Arrays.toString(bolt).toLowerCase().split("");
+
+		
+
+		boolean a = Arrays.equals(nutL, boltL);
+
+
+		for(int i=0;i<n;i++)
+		{	if(a== true)
+			System.out.print(nut[i]+" ");
+		}
+		for(int i=0;i<n;i++)
+		{   
+
+			if(a==true)
+				System.out.print(bolt[i]+" ");
+		}
+	}
+
+}
